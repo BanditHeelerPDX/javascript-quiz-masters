@@ -93,7 +93,7 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
-}
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
