@@ -1,0 +1,112 @@
+:root {
+    background-color: bisque;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 60%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1 {
+    font-size: 4rem;
+    color: rgb(209, 12, 134);
+    margin-bottom: 5rem;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2.75rem;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.text-center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.btn {
+    font-size: 2.25rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(90deg, rgb(18,92,255), rgb(0,148,255) 100%);
+    border-radius: 4px;
+}
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.5rem 0 rgb(16, 116, 244, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.025);
+}
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(216,92,255), rgb(255,148,255) 100%);
+}
+#highscore-btn:hover {
+    box-shadow: 0 0.5rem 1.5rem 0 rgb(255, 125, 255);
+}
+
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow: 0 0.2rem 1.4rem 0 rgb(18,92,255);
+}
+
+input::placeholder {
+    color: honeydew;
+}
+#userInitials {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: antiquewhite;
+    text-align: center;
+}
+
+#saveScore {
+    border: none;
+}
