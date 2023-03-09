@@ -2,7 +2,7 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const scoreData = document.getElementById('score');
 const questionCounterText = document.getElementById('questionCounter')
-//const timerData = document.getElementById('timer');
+const timerData = document.getElementById('timer');
 
 
 let currentQuestion = {};
@@ -10,7 +10,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-//let timer = 20;
+let timer = 20;
 
 let questions = [ 
     {    
@@ -67,12 +67,25 @@ const SCORE_POINTS = 3;
 const TOTAL_QUESTIONS = questions.length;
 
 startGame = () => {
+    startTimer();
     questionCounter = 0;
     //timer = 20;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
 };
+
+startTimer = () => {
+  setInterval(() => {
+    timer--;
+    timerData.innerText = timer;
+    if (timer <= 0) {
+      clearInterval();
+      localStorage.setItem('mostRecentScore', score);
+        return window.location.assign('/gameover.html');
+    }
+  }, 1000);
+}
 
 getNewQuestion = () => {
 
@@ -109,9 +122,9 @@ choices.forEach( choice => {
 
           if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
-          } //else {
-            //timer -= 3;
-         // }
+          } else {
+            timer -= 3;
+          }
 
 
 
