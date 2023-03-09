@@ -77,6 +77,7 @@ startGame = () => {
 getNewQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= TOTAL_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
         return window.location.assign('/gameover.html')
     }
     questionCounter++;
@@ -111,6 +112,8 @@ choices.forEach( choice => {
           } //else {
             //timer -= 3;
          // }
+
+
 
         selectedChoice.parentElement.classList.add(classToApply);
 

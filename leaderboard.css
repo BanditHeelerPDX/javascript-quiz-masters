@@ -1,13 +1,31 @@
 body {
-    color: antiquewhite;
+    background-color: bisque;
 }
 
 #highScoresList {
     list-style: none;
     margin-bottom: 4rem;
+    justify-content: center;
+    color: rgb(209, 12, 134);
 }
 
 .highScore {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+}
+
+#finalScore {
+
+    color: rgb(209, 12, 134);
+}
+
+.container {
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.btn {
+    color: rgb(18, 92, 255);
+    
 }

@@ -55,7 +55,9 @@ body {
     background: rgb(11, 223, 36);
     width: 0%;
 }
-
+#finalScore {
+    color: rgb(209, 12, 134);
+}
 
 
 @media screen and (max-width: 768px) {

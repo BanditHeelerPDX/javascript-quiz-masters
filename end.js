@@ -10,7 +10,7 @@ const MAX_HIGH_SCORES = 10;
 finalScore.innerText = mostRecentScore;
 
 userInitials.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !userInitials.value
+    saveScoreBtn.disabled = !userInitials.value;
 });
 
 saveHighScore = e => {
