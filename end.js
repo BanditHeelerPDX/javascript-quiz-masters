@@ -1,9 +1,9 @@
-const userInitials = document.querySelector('#userInitials');
-const saveScoreBtn = document.querySelector('#saveScoreBtn');
-const finalScore = document.querySelector('#finalScore');
-const mostRecentScore = document.querySelector('#mostRecentScore');
+const userInitials = document.getElementById('userInitials');
+const saveScoreBtn = document.getElementById('saveScoreBtn');
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
-const highScores = JSON.parse(localStorage('highScores')) || [];
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const MAX_HIGH_SCORES = 10;
 
@@ -19,17 +19,15 @@ saveHighScore = e => {
     const score = {
         score: mostRecentScore,
         name: userInitials.value
-    }
+    };
 
     highScores.push(score);
 
-    highScores.sort((a,b) => {
-        return b.score - a.score
-    })
+    highScores.sort((a,b) => b.score - a.score);
 
     highScores.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/')
+    window.location.assign('/leaderboard.html')
 }
 
