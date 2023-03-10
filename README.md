@@ -4,7 +4,7 @@
 
 Test your knowledge of Javascript with a short quiz game that stores recent top scores for comparison.  Multiple choice questions and a timer are your immediate opponents, but bragging rights will be posted for all to see upon completion. ![It looks like this!](Screenshot 2023-03-09 155205.PNG)
 
-[Snapshot of live homepage](ScreenshotOfGame.png)
+[Snapshot of live homepage](/assets/ScreenshotOfGame.png)
 
 ## Licensing
 
