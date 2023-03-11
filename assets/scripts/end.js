@@ -28,6 +28,6 @@ saveHighScore = e => {
     highScores.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/assets/pages/leaderboard.html')
+    window.location.assign('../pages/leaderboard.html')
 }
 

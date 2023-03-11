@@ -91,7 +91,7 @@ getNewQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCounter >= TOTAL_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
-        return window.location.assign('/assets/pages/gameover.html')
+        return window.location.assign('../pages/gameover.html')
     }
     questionCounter++;
     questionCounterText.innerText = `${questionCounter}/${TOTAL_QUESTIONS}`;
