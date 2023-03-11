@@ -27,6 +27,6 @@ body {
     margin-left: 20px;
 }
 .btn {
-    color: rgb(18, 92, 255);
-    
+    background-color: rgb(18, 92, 255);
+    color:black;
 }
