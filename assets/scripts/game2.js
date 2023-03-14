@@ -76,11 +76,11 @@ startGame = () => {
 };
 
 startTimer = () => {
-  setInterval(() => {
+  let interval = setInterval(() => {
     timer--;
     timerData.innerText = timer;
     if (timer <= 0) {
-      clearInterval();
+      clearInterval(interval);
       localStorage.setItem('mostRecentScore', score);
         return window.location.assign('/assets/pages/gameover.html');
     }
